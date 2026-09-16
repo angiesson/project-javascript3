@@ -1,4 +1,5 @@
 import express from "express";
+import { products } from "./data/products.js";
 
 // Skapa expressapplikation
 const app = express();
@@ -8,23 +9,7 @@ const port = process.env.PORT || 8000;
 
 // Skapa endpoints som svarar på HTTP GET för api/products
 app.get("/api/products", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      name: "Svart T-shirt",
-      price: 199
-    },
-    {
-      id: 2,
-      name: "Blå jeans",
-      price: 499
-    },
-    {
-      id: 3,
-      name: "Vit hoodie",
-      price: 399
-    }
-  ]);
+  res.json(products);
 });
 
 // Starta servern

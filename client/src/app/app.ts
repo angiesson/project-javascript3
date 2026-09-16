@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Product } from '../models/Product';
+import { Productlist } from './productlist/productlist';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Productlist],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -15,10 +16,12 @@ export class App {
 // Injicera http-client - kallas "dependecy injection"
 private http = inject(HttpClient);
 
+products = signal<Product[]>([]);
+
 // Anropa servern och hämta produkter
 ngOnInit() {
   this.http.get('/api/products').subscribe((products) => {
-    console.log(products);
+    this.products.set(products as Product[]);
   });
 }
 }
