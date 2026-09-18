@@ -1,30 +1,30 @@
 export const products = [
   {
     id: 1,
-    name: "Svart T-shirt",
-    description: "En svart T-shirt",
-    price: 199,
-    imageUrl: "tshirt.jpg"
+    name: "Black Velvet",
+    description: "A masculine fragrance",
+    price: 1999,
+    imageUrl: "perfume1.jpg"
   },
   {
     id: 2,
-    name: "Blå jeans",
-    description: "Ett par blå jeans",
-    price: 499,
-    imageUrl: "jeans.jpg"
+    name: "Blue Waves",
+    description: "A fresh scent for summer",
+    price: 1399,
+    imageUrl: "perfume2.jpg"
   },
   {
     id: 3,
-    name: "Vit hoodie",
-    description: "En vit hoodie",
-    price: 399,
-    imageUrl: "hoodie.jpg"
+    name: "White Cloud",
+    description: "A light and airy scent",
+    price: 1599,
+    imageUrl: "perfume3.jpg"
   },
   {
     id: 4,
-    name: "Grön hoodie",
-    description: "En grön hoodie",
-    price: 399,
-    imageUrl: "hoodie2.jpg"
+    name: "Green Calmness",
+    description: "A calming fragrance with herbal notes",
+    price: 1299,
+    imageUrl: "perfume4.jpg"
   }
 ];

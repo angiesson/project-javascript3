@@ -12,6 +12,17 @@ app.get("/api/products", (req, res) => {
   res.json(products);
 });
 
+
+// Hämtar en specifik produkt baserat på ID
+app.get("/api/products/:id", (req, res) => {
+  const id = Number(req.params.id);
+
+  const product = products.find((product) => product.id === id);
+
+  res.json(product);
+});
+
+
 // Starta servern
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);

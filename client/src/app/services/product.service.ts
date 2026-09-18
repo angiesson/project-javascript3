@@ -1,0 +1,19 @@
+import { inject, Service } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Product } from '../../models/Product';
+
+@Service()
+export class ProductService {
+      // Injicera http-client - kallas "dependecy injection"
+private http = inject(HttpClient);
+
+getProducts() {
+    return this.http.get<Product[]>('/api/products');
+  }
+
+  // Hämtar en specifik produkt baserat på dess ID
+
+  getProduct(id: string) {
+    return this.http.get<Product>(`/api/products/${id}`);
+  }
+}
