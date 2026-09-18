@@ -1,6 +1,6 @@
 # EverPure
 
-Freaky Fashion är ett e-handelsprojekt som utvecklas som en del av min utbildning till frontendutvecklare.
+EverPure är ett e-handelsprojekt som utvecklas som en del av min utbildning till frontendutvecklare.
 
 Projektet består av en frontend byggd med Angular och TypeScript samt en backend byggd med Node.js och Express.
 
