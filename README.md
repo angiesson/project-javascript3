@@ -1,4 +1,4 @@
-# Freaky Fashion
+# EverPure
 
 Freaky Fashion är ett e-handelsprojekt som utvecklas som en del av min utbildning till frontendutvecklare.
 
