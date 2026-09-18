@@ -1,0 +1,28 @@
+<h1>Administration</h1>
+
+<h2>Produkter</h2>
+
+
+<button (click)="navigateToPage('admin/products/new')">
+  Ny produkt
+</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Namn</th>
+      <th>SKU</th>
+      <th>Pris</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (product of products(); track product.id) {
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.sku }}</td>
+        <td>{{ product.price }} SEK</td>
+      </tr>
+    }
+  </tbody>
+</table>
