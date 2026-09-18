@@ -1,1 +1,26 @@
-<p>productdetails works!</p>
+<!-- Huvudinnehåll för produktsidan -->
+<main class="max-w-5xl mx-auto px-6 py-10">
+
+  <!-- Kontrollerar att en produkt finns innan produktinformationen visas -->
+  <!-- "as product" skapar en lokal variabel som vi kan använda nedanför -->
+  @if (product(); as product) {
+
+    <!-- Visar produktens namn -->
+    <h2 class="text-2xl font-semibold mb-4">
+      {{ product.name }}
+    </h2>
+
+    <!-- Visar produktens beskrivning -->
+    <p class="text-lg mb-4">
+      {{ product.description }}
+    </p>
+
+    <!-- Visar produktens pris -->
+    <div>
+      <span class="font-semibold">Pris:</span>
+      {{ product.price }} kr
+    </div>
+
+  }
+
+</main>

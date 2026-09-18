@@ -1,4 +1,4 @@
-# Freaky Fashion
+# EverPure
 
 Ett e-handelsprojekt byggt med Angular och Express.
 
