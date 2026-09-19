@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ProductService } from '../../../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [ReactiveFormsModule],
@@ -11,6 +12,7 @@ import { ProductService } from '../../../services/product.service';
 export class NewProduct {
 
   private productService = inject(ProductService);
+  private router = inject(Router);
 
 newProductForm = new FormGroup({
   name: new FormControl('', { nonNullable: true }),
@@ -38,6 +40,7 @@ onSubmit() {
   this.productService.addProduct(product).subscribe({
     next: (createdProduct) => {
       console.log('Product created:', createdProduct);
+       this.router.navigate(['/admin/products']);
     },
     error: (error) => {
       console.error('Could not create product:', error);
