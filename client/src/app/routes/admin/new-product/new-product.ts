@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProductService } from '../../../services/product.service';
 import { Router } from '@angular/router';
 
@@ -15,14 +15,39 @@ export class NewProduct {
   private router = inject(Router);
 
 newProductForm = new FormGroup({
-  name: new FormControl('', { nonNullable: true }),
-  description: new FormControl('', { nonNullable: true }),
-  price: new FormControl<number | null>(null),
-  sku: new FormControl('', { nonNullable: true }),
-  imageUrl: new FormControl('', { nonNullable: true }),
+  name: new FormControl('', {
+    nonNullable: true,
+    validators: [
+      Validators.required,
+      Validators.minLength(2),
+      Validators.pattern(/.*[a-zA-ZÅÄÖåäö].*/)
+    ]
+  }),
+
+  description: new FormControl('', {
+    nonNullable: true
+  }),
+
+  price: new FormControl<number | null>(null, [
+    Validators.required,
+    Validators.min(1)
+  ]),
+
+  sku: new FormControl('', {
+    nonNullable: true,
+    validators: [Validators.required]
+  }),
+
+  imageUrl: new FormControl('', {
+    nonNullable: true
+  }),
 });
 
 onSubmit() {
+    if (this.newProductForm.invalid) {
+    return;
+  }
+  
   const price = this.newProductForm.controls.price.value;
 
   if (price === null) {

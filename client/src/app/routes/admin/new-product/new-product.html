@@ -9,6 +9,22 @@
       name="name"
       formControlName="name"
     >
+
+    @if (newProductForm.controls.name.touched &&
+         newProductForm.controls.name.hasError('required')) {
+      <p>Name is required.</p>
+    }
+
+    @if (newProductForm.controls.name.touched &&
+         newProductForm.controls.name.hasError('minlength')) {
+      <p>Name must be at least 2 characters.</p>
+    }
+
+    @if (newProductForm.controls.name.touched &&
+         newProductForm.controls.name.hasError('pattern')) {
+      <p>Name must contain letters.</p>
+    }
+
   </div>
 
   <div>
@@ -27,6 +43,11 @@
       name="sku"
       formControlName="sku"
     >
+
+    @if (newProductForm.controls.sku.touched &&
+         newProductForm.controls.sku.hasError('required')) {
+      <p>SKU is required.</p>
+    }
   </div>
 
   <div>
@@ -37,6 +58,17 @@
       name="price"
       formControlName="price"
     >
+
+    @if (newProductForm.controls.price.touched &&
+         newProductForm.controls.price.hasError('required')) {
+      <p>Price is required.</p>
+    }
+
+    @if (newProductForm.controls.price.touched &&
+         newProductForm.controls.price.hasError('min')) {
+      <p>Price must be at least 1 kr.</p>
+    }
+  
   </div>
 
   <div>
@@ -48,5 +80,9 @@
   >
 </div>
 
-  <button type="submit">Add Product</button>
+  <button type="submit"
+  [disabled]="newProductForm.invalid"
+  >
+  Add Product
+</button>
 </form>
