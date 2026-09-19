@@ -1,10 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../../models/Product';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-products',
   styleUrl: './products.css',
   templateUrl: './products.html',
@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class Products {
   private productService = inject(ProductService);
 
-  private router = inject(Router);
 
   products = signal<Product[]>([]);
 
@@ -21,10 +20,5 @@ export class Products {
     this.productService.getProducts().subscribe((products) => {
       this.products.set(products);
     });
-  }
-
-  // Programatiskt navigera till en annan sida med hjälp av Angular Router
-   navigateToPage(path: string) {
-    this.router.navigate([`/${path}`]);
   }
 }

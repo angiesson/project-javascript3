@@ -1,6 +1,6 @@
 import { inject, Service } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../../models/Product';
+import { NewProduct, Product } from '../../models/Product';
 
 @Service()
 export class ProductService {
@@ -16,4 +16,8 @@ getProducts() {
   getProduct(id: string) {
     return this.http.get<Product>(`/api/products/${id}`);
   }
+
+  addProduct(product: NewProduct) {
+  return this.http.post<Product>('/api/products', product);
+}
 }

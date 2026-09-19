@@ -4,12 +4,25 @@ import { products } from "./data/products.js";
 // Skapa expressapplikation
 const app = express();
 
+app.use(express.json());
+
 // Bestäm vilken port servern ska använda
 const port = process.env.PORT || 8000;
 
 // Skapa endpoints som svarar på HTTP GET för api/products
 app.get("/api/products", (req, res) => {
   res.json(products);
+});
+
+app.post("/api/products", (req, res) => {
+  const newProduct = {
+    id: products.length + 1,
+    ...req.body,
+  };
+
+  products.push(newProduct);
+
+  res.status(201).json(newProduct);
 });
 
 

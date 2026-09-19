@@ -6,3 +6,5 @@ export interface Product {
     sku: string;
     imageUrl: string;
 }
+
+export type NewProduct = Omit<Product, 'id'>;
