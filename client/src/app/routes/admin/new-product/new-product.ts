@@ -44,10 +44,11 @@ newProductForm = new FormGroup({
 });
 
 onSubmit() {
-    if (this.newProductForm.invalid) {
-    return;
-  }
-  
+if (this.newProductForm.invalid) {
+  this.newProductForm.markAllAsTouched();
+  return;
+}
+
   const price = this.newProductForm.controls.price.value;
 
   if (price === null) {
