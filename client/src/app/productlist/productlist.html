@@ -1,8 +1,18 @@
-<ul>
+// Skapa grids (produktkort)
+
+<ul class="grid grid-cols-4 gap-6">
   @for (product of products(); track product.id) {
     <li>
       <a [routerLink]="['/products', product.id]">
+
+        <img
+          [src]="product.imageUrl"
+          [alt]="product.name"
+          class="w-full h-72 object-cover"
+        >
+    
         {{ product.name }}
+     <p>{{ product.price }} kr</p>
       </a>
     </li>
   }

@@ -5,7 +5,7 @@ export const products = [
     description: "A masculine fragrance",
     price: 1999,
     sku: "BV-001",
-    imageUrl: "perfume1.jpg"
+    imageUrl: "https://picsum.photos/500/600"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     description: "A fresh scent for summer",
     price: 1399,
     sku: "BW-002",
-    imageUrl: "perfume2.jpg"
+    imageUrl: 'https://picsum.photos/400/500?random=1'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     description: "A light and airy scent",
     price: 1599,
     sku: "WC-003",
-    imageUrl: "perfume3.jpg"
+    imageUrl: 'https://picsum.photos/400/500?random=2'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     description: "A calming fragrance with herbal notes",
     price: 1299,
     sku: "GC-004",
-    imageUrl: "perfume4.jpg"
+    imageUrl: 'https://picsum.photos/400/500?random=3'
   },
 
   {
@@ -38,7 +38,7 @@ export const products = [
   description: "A warm and elegant fragrance",
   price: 1799,
   sku: "GA-005",
-  imageUrl: "perfume5.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=4'
 },
 {
   id: 6,
@@ -46,7 +46,7 @@ export const products = [
   description: "A soft floral scent with a touch of sweetness",
   price: 1499,
   sku: "PB-006",
-  imageUrl: "perfume6.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=5'
 },
 {
   id: 7,
@@ -54,7 +54,7 @@ export const products = [
   description: "A deep and mysterious evening fragrance",
   price: 1899,
   sku: "MS-007",
-  imageUrl: "perfume7.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=7'
 },
 {
   id: 8,
@@ -62,7 +62,7 @@ export const products = [
   description: "A warm and creamy scent with vanilla notes",
   price: 1599,
   sku: "VD-008",
-  imageUrl: "perfume8.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=6'
 },
 {
   id: 9,
@@ -70,7 +70,7 @@ export const products = [
   description: "A clean and refreshing aquatic fragrance",
   price: 1399,
   sku: "OM-009",
-  imageUrl: "perfume9.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=9'
 },
 {
   id: 10,
@@ -78,15 +78,16 @@ export const products = [
   description: "A rich and sensual fragrance with fruity notes",
   price: 1699,
   sku: "RP-010",
-  imageUrl: "perfume10.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=8'
 },
+
 {
   id: 11,
   name: "Silver Moon",
   description: "A cool and sophisticated fragrance",
   price: 1799,
   sku: "SM-011",
-  imageUrl: "perfume11.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=10'
 },
 {
   id: 12,
@@ -94,6 +95,6 @@ export const products = [
   description: "A delicate floral fragrance with soft rose notes",
   price: 1499,
   sku: "RW-012",
-  imageUrl: "perfume12.jpg"
+  imageUrl: 'https://picsum.photos/400/500?random=11'
 }
 ];

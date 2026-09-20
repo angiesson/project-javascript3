@@ -5,6 +5,12 @@
   <!-- "as product" skapar en lokal variabel som vi kan använda nedanför -->
   @if (product(); as product) {
 
+        <!-- Visar produktens bild -->
+      <img
+    [src]="product.imageUrl"
+    [alt]="product.name"
+  >
+
     <!-- Visar produktens namn -->
     <h2 class="text-2xl font-semibold mb-4">
       {{ product.name }}
