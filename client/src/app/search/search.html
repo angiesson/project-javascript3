@@ -1,0 +1,12 @@
+<form (submit)="search(); $event.preventDefault()">
+  <input
+    type="text"
+    placeholder="Search products"
+    [value]="searchTerm()"
+    (input)="searchTerm.set($any($event.target).value)"
+  >
+
+  <button type="submit">
+    Search
+  </button>
+</form>
