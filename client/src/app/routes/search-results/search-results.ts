@@ -18,19 +18,20 @@ export class SearchResults {
   products = signal<Product[]>([]);
   searchTerm = signal('');
 
-  ngOnInit() {
-    const query = this.route.snapshot.queryParamMap.get('q');
+ngOnInit() {
+  this.route.queryParamMap.subscribe(params => {
+    const query = params.get('q') ?? '';
 
-  if (query) {
     this.searchTerm.set(query);
-  }
-  this.productService.getProducts()
-  .subscribe(products => {
-    const filteredProducts = products.filter(product =>
-      product.name.toLowerCase().includes(this.searchTerm().toLowerCase())
-    );
 
-    this.products.set(filteredProducts);
+    this.productService.getProducts()
+      .subscribe(products => {
+        const filteredProducts = products.filter(product =>
+          product.name.toLowerCase().includes(query.toLowerCase())
+        );
+
+        this.products.set(filteredProducts);
+      });
   });
 }
 }
