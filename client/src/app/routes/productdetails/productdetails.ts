@@ -18,10 +18,10 @@ export class Productdetails {
   product = signal<Product | null>(null);
 
     ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
+    const slug = this.route.snapshot.paramMap.get('slug');
 
-    if (id) {
-      this.productService.getProduct(id)
+    if (slug) {
+      this.productService.getProduct(slug)
       .subscribe(product => this.product.set(product));
       };
   }

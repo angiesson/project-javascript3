@@ -7,7 +7,7 @@ import { SearchResults } from './routes/search-results/search-results';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'products/:id', component: Productdetails },
+  { path: 'products/:slug', component: Productdetails },
   { path: 'search-results', component: SearchResults },
   { path: 'admin/products', component: Products },
   { path: 'admin/products/new', component: NewProduct }

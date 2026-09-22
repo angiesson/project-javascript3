@@ -1,8 +1,8 @@
 
 <ul class="grid grid-cols-4 gap-6">
-  @for (product of products(); track product.id) {
+  @for (product of products(); track product.slug) {
     <li>
-      <a [routerLink]="['/products', product.id]">
+      <a [routerLink]="['/products', product.slug]">
 
         <img
           [src]="product.imageUrl"

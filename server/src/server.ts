@@ -18,30 +18,30 @@ app.get("/api/products", (req, res) => {
 });
 
 app.post("/api/products", (req, res) => {
-  const { name, description, price, sku, imageUrl } = req.body;
+  const { name, slug, description, price, sku, imageUrl } = req.body;
 
   const result = db
   .prepare(`
-    INSERT INTO products (name, description, price, sku, imageUrl)
-    VALUES (?, ?, ?, ?, ?)
+    INSERT INTO products (name, slug, description, price, sku, imageUrl)
+    VALUES (?, ?, ?, ?, ?, ?)
   `)
-  .run(name, description, price, sku, imageUrl);
+  .run(name, slug, description, price, sku, imageUrl);
 
   const newProduct = db
-  .prepare('SELECT * FROM products WHERE id = ?')
-  .get(result.lastInsertRowid);
+  .prepare('SELECT * FROM products WHERE slug = ?')
+  .get(slug);
 
   res.status(201).json(newProduct);
 });
 
 
-// Hämtar en specifik produkt baserat på ID
-app.get("/api/products/:id", (req, res) => {
-  const id = Number(req.params.id);
+// Hämtar en specifik produkt baserat på slug
+app.get("/api/products/:slug", (req, res) => {
+  const slug = req.params.slug;
 
-    const product = db
-    .prepare('SELECT * FROM products WHERE id = ?')
-    .get(id);
+  const product = db
+  .prepare('SELECT * FROM products WHERE slug = ?')
+  .get(slug);
 
   res.json(product);
 });
