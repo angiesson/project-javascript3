@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './spot.css',
   templateUrl: './spot.html',
 })
-export class Spot {}
+export class Spot {
+  imageUrl = input.required<string>();
+  title = input.required<string>();
+  link = input.required<string>();
+
+}

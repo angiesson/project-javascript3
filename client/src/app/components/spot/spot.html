@@ -1,1 +1,11 @@
-<p>spot works!</p>
+<a [href]="link()" class="relative block">
+  <img
+    [src]="imageUrl()"
+    [alt]="title()"
+    class="w-full"
+  >
+
+  <h2 class="absolute inset-0 flex items-center justify-center">
+    {{ title() }}
+  </h2>
+</a>

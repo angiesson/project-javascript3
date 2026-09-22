@@ -3,9 +3,10 @@ import { Product } from '../../../models/Product';
 import { Productlist } from '../../components/productlist/productlist';
 import { ProductService } from '../../services/product.service';
 import { Hero } from '../../components/hero/hero';
+import { Spot } from '../../components/spot/spot';
 
 @Component({
-  imports: [Productlist, Hero],
+  imports: [Productlist, Hero, Spot],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',
