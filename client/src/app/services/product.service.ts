@@ -11,10 +11,10 @@ getProducts() {
     return this.http.get<Product[]>('/api/products');
   }
 
-  // Hämtar en specifik produkt baserat på dess ID
+  // Hämtar en specifik produkt baserat på dess slug
 
-  getProduct(id: string) {
-    return this.http.get<Product>(`/api/products/${id}`);
+  getProduct(slug: string) {
+    return this.http.get<Product>(`/api/products/${slug}`);
   }
 
   addProduct(product: NewProduct) {

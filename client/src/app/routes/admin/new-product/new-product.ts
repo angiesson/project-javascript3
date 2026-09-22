@@ -55,8 +55,16 @@ if (this.newProductForm.invalid) {
     return;
   }
 
+const name = this.newProductForm.controls.name.value;
+
+const slug = name
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, '-');
+
   const product = {
     name: this.newProductForm.controls.name.value,
+    slug: slug,
     description: this.newProductForm.controls.description.value,
     price: price,
     sku: this.newProductForm.controls.sku.value,
