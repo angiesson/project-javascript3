@@ -6,7 +6,7 @@ export const products = [
     description: "A masculine fragrance with woody notes",
     price: 1999,
     sku: "BV-001",
-    imageUrl: "https://picsum.photos/500/600"
+    imageUrl: "/images/products/black-velvet.jpg"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const products = [
     description: "A fresh scent with hints of citrus and sea breeze",
     price: 1399,
     sku: "BW-002",
-    imageUrl: 'https://picsum.photos/400/500?random=1'
+    imageUrl: "/images/products/blue-waves.jpg"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const products = [
     description: "A light and airy scent with floral undertones",
     price: 1599,
     sku: "WC-003",
-    imageUrl: 'https://picsum.photos/400/500?random=2'
+    imageUrl: "/images/products/white-cloud.jpg"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const products = [
     description: "A calming fragrance with herbal notes and a touch of mint",
     price: 1299,
     sku: "GC-004",
-    imageUrl: 'https://picsum.photos/400/500?random=3'
+    imageUrl: "/images/products/green-calmness.jpg"
   },
 
   {
@@ -43,7 +43,7 @@ export const products = [
   description: "A warm and elegant fragrance with amber and vanilla notes",
   price: 1799,
   sku: "GA-005",
-  imageUrl: 'https://picsum.photos/400/500?random=4'
+  imageUrl: "/images/products/golden-amber.jpg"
 },
 {
   id: 6,
@@ -52,7 +52,7 @@ export const products = [
   description: "A soft floral scent with a touch of sweetness and freshness",
   price: 1499,
   sku: "PB-006",
-  imageUrl: 'https://picsum.photos/400/500?random=5'
+  imageUrl: "/images/products/pink-blossom.jpg"
 },
 {
   id: 7,
@@ -61,7 +61,7 @@ export const products = [
   description: "A deep and mysterious evening fragrance with hints of musk and spice",
   price: 1899,
   sku: "MS-007",
-  imageUrl: 'https://picsum.photos/400/500?random=7'
+  imageUrl: "/images/products/midnight-sky.jpg"
 },
 {
   id: 8,
@@ -70,7 +70,7 @@ export const products = [
   description: "A warm and creamy scent with vanilla notes and a touch of sweetness",
   price: 1599,
   sku: "VD-008",
-  imageUrl: 'https://picsum.photos/400/500?random=6'
+  imageUrl: "/images/products/vanilla-dream.jpg"
 },
 {
   id: 9,
@@ -79,7 +79,7 @@ export const products = [
   description: "A vibrant and exotic fragrance with tropical notes",
   price: 1399,
   sku: "OM-009",
-  imageUrl: 'https://picsum.photos/400/500?random=9'
+  imageUrl: "/images/products/djungle-breeze.jpg"
 },
 {
   id: 10,
@@ -88,7 +88,7 @@ export const products = [
   description: "A rich and sensual fragrance with fruity notes and a hint of spice",
   price: 1699,
   sku: "RP-010",
-  imageUrl: 'https://picsum.photos/400/500?random=8'
+  imageUrl: "/images/products/red-passion.jpg"
 },
 
 {
@@ -98,7 +98,7 @@ export const products = [
   description: "A cool and sophisticated fragrance with hints of lavender and musk",
   price: 1799,
   sku: "SM-011",
-  imageUrl: 'https://picsum.photos/400/500?random=10'
+  imageUrl: "/images/products/silver-moon.jpg"
 },
 {
   id: 12,
@@ -107,7 +107,7 @@ export const products = [
   description: "A delicate floral fragrance with soft rose notes and a hint of freshness",
   price: 1499,
   sku: "RW-012",
-  imageUrl: 'https://picsum.photos/400/500?random=11'
+  imageUrl: "/images/products/rose-whisper.jpg"
 
 },
 
@@ -118,6 +118,6 @@ export const products = [
   description: "An elegant and luminous fragrance with notes of white flowers, soft musk and warm amber",
   price: 1799,
   sku: "DV-013",
-  imageUrl: "https://picsum.photos/400/500?random=13"
+  imageUrl: "/images/products/diamond-veil.jpg"
 }
 ];
