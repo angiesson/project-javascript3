@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { Productlist } from '../../productlist/productlist';
+import { Productlist } from '../../components/productlist/productlist';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../../models/Product';
 import { ActivatedRoute } from '@angular/router';
