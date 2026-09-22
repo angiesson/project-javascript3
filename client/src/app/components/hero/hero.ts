@@ -11,5 +11,5 @@ export class Hero {
 
   description = 'Explore our collection of unique fragrances.';
 
-  imageUrl = 'https://picsum.photos/1200/500';
+  imageUrl = '/images/hero.jpg';
 }
