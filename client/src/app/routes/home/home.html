@@ -20,4 +20,8 @@
   />
 </div>
 
-<app-productlist [products]="products()" />
+<section>
+  <h2>Popular Products</h2>
+
+  <app-productlist [products]="products().slice(0, 8)" />
+</section>
