@@ -1,5 +1,5 @@
 
-<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 lg:gap-y-16">
+<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-12 gap-y-10 lg:gap-y-16">
   @for (product of products(); track product.slug) {
     <li>
       <div class="relative">
@@ -12,12 +12,13 @@
         >
         </a>
 
-                <span
-          class="absolute bottom-3 right-3 text-5xl text-white"
-          aria-label="Add to favorites"
-        >
-          ♥
-        </span>
+<button
+  type="button"
+  class="absolute bottom-3 right-3 text-5xl text-white cursor-pointer hover:scale-110 transition-transform"
+  aria-label="Add to favorites"
+>
+  ♥
+</button>
       </div>
 
       <a

@@ -8,18 +8,22 @@ import { Router } from '@angular/router';
   templateUrl: './search.html',
 })
 export class Search {
+
   private router = inject(Router);
+
   searchTerm = signal('');
 
-search() {
-  const term = this.searchTerm().trim();
+  search() {
+    const term = this.searchTerm().trim();
 
-  if (!term) {
-    return;
+    if (!term) {
+      return;
+    }
+
+    this.router.navigate(['/search-results'], {
+      queryParams: { q: term }
+    });
+
+    this.searchTerm.set('');
   }
-
-  this.router.navigate(['/search-results'], {
-    queryParams: { q: term }
-  });
-}
 }

@@ -1,11 +1,13 @@
-<main class="max-w-5xl mx-auto px-6 py-10">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-<h1 class="text-2xl font-semibold mb-6">
-  Search results for: {{ searchTerm() }}
-</h1>
+  <h1 class="font-['Cormorant_Garamond'] text-3xl font-semibold mb-8">
+    Search results for: {{ searchTerm() }}
+  </h1>
 
-@if (products().length > 0) {
-    <app-productlist [products]="products()" />
+  @if (products().length > 0) {
+    <div class="lg:w-3/4">
+      <app-productlist [products]="products()" />
+    </div>
   } @else {
     <p>
       No products found for "{{ searchTerm() }}".
