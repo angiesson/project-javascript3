@@ -1,28 +1,66 @@
-<h1>Administration</h1>
+<main class="max-w-5xl mx-auto px-6 py-10">
 
-<h2>Produkter</h2>
+  <h1 class="font-['Cormorant_Garamond'] text-4xl font-semibold text-[#121f16] mb-8">
+    Administration
+  </h1>
 
+  <div class="flex items-center justify-between mb-6">
 
-<button routerLink="/admin/products/new">
-  New product
-</button>
- 
-<table>
-  <thead>
-    <tr>
-      <th>Namn</th>
-      <th>SKU</th>
-      <th>Pris</th>
-    </tr>
-  </thead>
+    <h2 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[#121f16]">
+      Products
+    </h2>
 
-  <tbody>
-    @for (product of products(); track product.id) {
-      <tr>
-        <td>{{ product.name }}</td>
-        <td>{{ product.sku }}</td>
-        <td>{{ product.price }} SEK</td>
+    <button
+      routerLink="/admin/products/new"
+      class="px-5 py-2 bg-[#121f16] text-[#F0E2B6] rounded-sm cursor-pointer hover:opacity-90 transition-opacity"
+    >
+      New product
+    </button>
+
+  </div>
+
+  <table class="w-full border-collapse border border-[#121f16]/30">
+
+    <thead>
+      <tr class="bg-[#121f16] text-[#F0E2B6]">
+
+        <th class="text-left px-4 py-3 border border-[#121f16]/30">
+          Name
+        </th>
+
+        <th class="text-left px-4 py-3 border border-[#121f16]/30">
+          SKU
+        </th>
+
+        <th class="text-left px-4 py-3 border border-[#121f16]/30">
+          Price
+        </th>
+
       </tr>
-    }
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      @for (product of products(); track product.id) {
+
+        <tr class="hover:bg-[#DDE5B6] transition-colors">
+
+          <td class="px-4 py-3 border border-[#121f16]/30">
+            {{ product.name }}
+          </td>
+
+          <td class="px-4 py-3 border border-[#121f16]/30">
+            {{ product.sku }}
+          </td>
+
+          <td class="px-4 py-3 border border-[#121f16]/30">
+            {{ product.price }} SEK
+          </td>
+
+        </tr>
+
+      }
+    </tbody>
+
+  </table>
+
+</main>
