@@ -1,10 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { Product } from '../../../models/Product';
-import { Productlist } from '../../productlist/productlist';
+import { Productlist } from '../../components/productlist/productlist';
 import { ProductService } from '../../services/product.service';
+import { Hero } from '../../components/hero/hero';
+import { Spot } from '../../components/spot/spot';
 
 @Component({
-  imports: [Productlist],
+  imports: [Productlist, Hero, Spot],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',

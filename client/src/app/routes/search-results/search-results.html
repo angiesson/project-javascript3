@@ -4,6 +4,12 @@
   Search results for: {{ searchTerm() }}
 </h1>
 
-  <app-productlist [products]="products()" />
+@if (products().length > 0) {
+    <app-productlist [products]="products()" />
+  } @else {
+    <p>
+      No products found for "{{ searchTerm() }}".
+    </p>
+  }
 
 </main>

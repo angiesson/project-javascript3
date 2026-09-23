@@ -1,0 +1,96 @@
+<header class="bg-[#121f16]">
+
+  <div class="relative px-4 py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+
+    <!-- Logo -->
+    <a routerLink="/">
+      <img
+        src="/images/everpure-logo.jpg"
+        alt="EverPure"
+        class="w-40 h-auto"
+      >
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav
+      class="hidden lg:flex absolute top-8 left-1/2 -translate-x-1/2 items-center gap-15 font-['Cormorant_Garamond'] text-base text-[#DDBE72]"
+    >
+      <a href="#" class="hover:opacity-70 transition-opacity">
+        PRODUCTS
+      </a>
+
+      <a href="#" class="hover:opacity-70 transition-opacity">
+        INGREDIENTS
+      </a>
+
+      <a href="#" class="hover:opacity-70 transition-opacity">
+        ABOUT
+      </a>
+
+      <a href="#" class="hover:opacity-70 transition-opacity">
+        CONTACT
+      </a>
+    </nav>
+
+    <!-- Search + icons -->
+    <div
+      class="flex items-center gap-4 w-full sm:w-auto sm:ml-auto sm:mr-2 lg:mr-4 sm:translate-y-12"
+    >
+      <app-search class="flex-1 min-w-0" />
+
+      <div class="flex items-center gap-4">
+
+        <!-- Favorites -->
+        <a
+          href="#"
+          aria-label="Favorites"
+          class="text-[#F0E2B6] hover:opacity-70 transition-opacity"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+            />
+          </svg>
+        </a>
+
+        <!-- Shopping cart -->
+        <a
+          href="#"
+          aria-label="Shopping cart"
+          class="text-[#F0E2B6] hover:opacity-70 transition-opacity"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 7H6"
+            />
+            <circle cx="10" cy="20" r="1" />
+            <circle cx="18" cy="20" r="1" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</header>

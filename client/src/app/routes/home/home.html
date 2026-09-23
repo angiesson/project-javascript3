@@ -1,1 +1,31 @@
-<app-productlist [products]="products()" />
+<app-hero />
+
+<!-- Spots -->
+<div class="hidden lg:grid lg:grid-cols-3 gap-8 mt-20 px-4 sm:px-6 lg:px-8">
+  <app-spot
+    title="Women's fragrances"
+    imageUrl="/images/spots/women-fragrance.jpg"
+    link="#"
+  />
+
+  <app-spot
+    title="Men's fragrances"
+    imageUrl="/images/spots/men-fragrance.jpg"
+    link="#"
+  />
+
+  <app-spot
+    title="Unisex fragrances"
+    imageUrl="/images/spots/unisex-fragrance.jpg"
+    link="#"
+  />
+</div>
+
+<!-- Popular Products -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+  <h2 class="font-['Cormorant_Garamond'] text-4xl font-semibold mb-6">
+    Popular Products
+  </h2>
+
+  <app-productlist [products]="products().slice(0, 8)" />
+</section>

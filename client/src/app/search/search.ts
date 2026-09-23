@@ -11,9 +11,15 @@ export class Search {
   private router = inject(Router);
   searchTerm = signal('');
 
-    search() {
-    this.router.navigate(['/search-results'], {
-      queryParams: { q: this.searchTerm() }
-    });
+search() {
+  const term = this.searchTerm().trim();
+
+  if (!term) {
+    return;
+  }
+
+  this.router.navigate(['/search-results'], {
+    queryParams: { q: term }
+  });
 }
 }
