@@ -2,10 +2,16 @@
   <img
     [src]="imageUrl()"
     [alt]="title()"
-    class="w-full"
+    class="w-full rounded-sm"
   >
 
-  <h2 class="absolute inset-0 flex items-center justify-center">
-    {{ title() }}
-  </h2>
+<h2
+  class="absolute bottom-10 left-1/2 -translate-x-1/2
+         bg-black/30 text-white
+         px-3 py-1
+         font-['Cormorant_Garamond'] text-5xl font-semibold
+         whitespace-nowrap"
+>
+  {{ title() }}
+</h2>
 </a>
