@@ -1,8 +1,13 @@
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-  <h1 class="font-['Cormorant_Garamond'] text-3xl font-semibold mb-8">
+  <h1 class="font-['Cormorant_Garamond'] text-3xl font-semibold mb-4">
     Search results for: {{ searchTerm() }}
   </h1>
+
+<p class="mb-8">
+  Found {{ products().length }}
+  {{ products().length === 1 ? 'product' : 'products' }}
+</p>
 
   @if (products().length > 0) {
     <div class="lg:w-3/4">
