@@ -3,30 +3,58 @@
 
   <!-- Kontrollerar att en produkt finns innan produktinformationen visas -->
   <!-- "as product" skapar en lokal variabel som vi kan använda nedanför -->
-  @if (product(); as product) {
+@if (product(); as product) {
 
-        <!-- Visar produktens bild -->
-      <img
+<div class="flex flex-col sm:flex-row gap-8">
+
+<!-- Produktbild -->
+<div class="sm:w-[340px] shrink-0">
+  <img
     [src]="product.imageUrl"
     [alt]="product.name"
+    class="w-full max-w-[340px] h-auto rounded-sm"
   >
+</div>
 
-    <!-- Visar produktens namn -->
-    <h2 class="text-2xl font-semibold mb-4">
-      {{ product.name }}
-    </h2>
+  <!-- Produktinformation -->
+  <div class="flex-1">
 
-    <!-- Visar produktens beskrivning -->
-    <p class="text-lg mb-4">
-      {{ product.description }}
-    </p>
 
-    <!-- Visar produktens pris -->
-    <div>
-      <span class="font-semibold">Pris:</span>
-      {{ product.price }} kr
+<h2 class="text-base font-semibold mb-4">
+  {{ product.name }}
+</h2>
+
+<p class="text-base mb-4">
+  {{ product.description }}
+</p>
+
+<p class="text-base mb-4">
+  {{ product.price }} kr
+</p>
+    
+
+      <button
+  type="button"
+  class="mt-4 px-5 py-2 text-sm bg-[#121f16] text-[#F0E2B6] rounded-sm cursor-pointer hover:opacity-90 transition-opacity"
+>
+  Add to cart
+</button>
+
     </div>
 
-  }
+  </div>
+
+}
+
+<!-- Liknande produkter visas från 640px -->
+<section class="hidden sm:block mt-16">
+
+  <h2 class="font-['Cormorant_Garamond'] text-2xl font-semibold mb-6">
+    Similar products
+  </h2>
+
+  <app-productlist [products]="similarProducts()" />
+
+</section>
 
 </main>
