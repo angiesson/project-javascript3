@@ -20,7 +20,7 @@ app.get("/api/products", (req, res) => {
 app.post("/api/products", (req, res) => {
   const { name, slug, description, price, sku, imageUrl } = req.body;
 
-  const result = db
+  db
   .prepare(`
     INSERT INTO products (name, slug, description, price, sku, imageUrl)
     VALUES (?, ?, ?, ?, ?, ?)

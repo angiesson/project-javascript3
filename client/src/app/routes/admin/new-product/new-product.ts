@@ -73,7 +73,6 @@ const slug = name
 
   this.productService.addProduct(product).subscribe({
     next: (createdProduct) => {
-      console.log('Product created:', createdProduct);
        this.router.navigate(['/admin/products']);
     },
     error: (error) => {

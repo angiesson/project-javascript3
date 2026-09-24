@@ -7,7 +7,6 @@ import { Productlist } from '../../components/productlist/productlist';
 @Component({
   imports: [Productlist],
   selector: 'app-productdetails',
-  styleUrl: './productdetails.css',
   templateUrl: './productdetails.html',
 })
 export class Productdetails {
