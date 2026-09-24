@@ -1,62 +1,59 @@
 # EverPure
 
-EverPure är ett e-handelsprojekt som utvecklas som en del av min utbildning till frontendutvecklare.
+EverPure is an e-commerce web application for perfumes, built as a school project in the JavaScript 3 course.
 
-Projektet består av en frontend byggd med Angular och TypeScript samt en backend byggd med Node.js och Express.
+The application consists of an Angular frontend and an Express backend. Product data is stored in a SQLite database.
 
-## Tekniker
+## Technologies
 
-### Frontend
 - Angular
 - TypeScript
-- HTML
-- CSS
-
-### Backend
+- Tailwind CSS
 - Node.js
 - Express
-- TypeScript
+- SQLite
 
-## Projektstruktur
+## Installation
 
-Projektet är uppdelat i två delar:
+Clone the repository and install the dependencies for both the client and server.
 
-- `client/` – Angular-applikationen
-- `server/` – Express-servern och API
+### Client
 
-## Starta projektet
+Open a terminal from the project folder:
 
-### Backend
+```bash
+cd client
+npm install
+ng serve
+```
 
-Öppna en terminal och gå till server-mappen:
+The client runs at:
+
+http://localhost:4200
+
+### Server
+
+Open a second terminal from the project folder:
 
 ```bash
 cd server
 npm install
 npm run dev
+```
 
-Frontend
+The server runs at:
 
-Öppna en ny terminal och gå till client-mappen:
+http://localhost:8000
 
-cd client
-npm install
-ng serve
+Both the client and server need to be running for the application to work correctly.
 
-Frontend-applikationen körs därefter lokalt på:
+## Features
 
-http://localhost:4200
+- Responsive product listing
+- Product detail pages
+- Product search
+- Similar products
+- SQLite product database
+- Admin product list
+- Add new products through the admin interface
 
-Utveckling
-
-Projektet är under utveckling och kommer att byggas ut med fler funktioner under kursens gång.
-
-
-Sedan sparar du med **Ctrl + S**.
-
-Eftersom README:n är ny behöver den också läggas till i Git. När du är nöjd kör du från `project-javascript3`:
-
-```bash
-git add README.md
-git commit -m "Add project README"
-git push
